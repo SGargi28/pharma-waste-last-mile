@@ -1,6 +1,6 @@
 import pandas as pd
 
-# Configurations
+# 1. Configurations
 INPUT_FILE = '2023 Waste Data Interrogator - Wastes Received (Excel) - Version 2.xlsb'
 SHEET_NAME = '2023 Waste Received'
 OUTPUT_FILE = 'SouthWest_Compliance_Analysis.csv'
