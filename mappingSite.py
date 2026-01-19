@@ -137,7 +137,7 @@ for idx, row in df_plants_unique.iterrows():
     ).add_to(m)
 
 
-# --- 5. ADD LEGEND ---
+# Add Legend
 legend_html = """
 <div style="position: fixed; 
      bottom: 50px; left: 50px; width: 250px; height: auto; 
