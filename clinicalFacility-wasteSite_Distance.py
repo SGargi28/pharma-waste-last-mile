@@ -3,9 +3,9 @@ import googlemaps
 from pyproj import Transformer
 from datetime import datetime
 
-# ==========================================
+
 # 1. CONFIGURATION
-# ==========================================
+
 API_KEY = 'AIzaSyCiIW4AE2O8E9dIr9A1wBdCpRNcyAljL7g'  
 MAX_DRIVE_MINUTES = 45
 
@@ -26,10 +26,9 @@ gmaps = googlemaps.Client(key=API_KEY)
 # Initialize Coordinate Transformer (BNG -> WGS84)
 transformer = Transformer.from_crs("epsg:27700", "epsg:4326")
 
-# ==========================================
+
 # 2. PROCESS WASTE SITES (Output File 1)
-# ==========================================
-print("1. Processing Waste Sites...")
+
 
 try:
     df_waste = pd.read_csv(FILE_WASTE_SITES, encoding='latin1')
@@ -82,10 +81,9 @@ df_waste_clean.to_csv(OUTPUT_WASTE, index=False)
 print(f"   > Saved filtered waste sites to {OUTPUT_WASTE}")
 
 
-# ==========================================
+
 # 3. PROCESS CLINICAL FACILITIES (Output File 2)
-# ==========================================
-print("2. Processing Clinical Facilities & Calculating Distances...")
+
 
 df_hosp = pd.read_csv(FILE_CLINICAL_FACILITY)
 
